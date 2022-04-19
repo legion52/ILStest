@@ -11,7 +11,6 @@ return data.data.allAddress
 function* taskWorker(action) {
    try {
       const tasks = yield call(taskFetch);
-      console.log(tasks);
       yield put({type: "GET_ALL_ADDRESS_FROM_SERVER", payload:tasks});
    } catch (e) {
       yield put({type: "USER_FETCH_FAILED", message: e.message});

@@ -1,6 +1,7 @@
 import L from "leaflet";
 import { createControlComponent } from "@react-leaflet/core";
 import "leaflet-routing-machine";
+import { useEffect } from "react";
 
 const createRoutineMachineLayer = (props) => {
   const { waypoints } = props;
@@ -18,7 +19,7 @@ const createRoutineMachineLayer = (props) => {
     fitSelectedRoutes: true,
     showAlternatives: false
   });
-
+  
   return instance;
 };
 
